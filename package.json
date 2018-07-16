@@ -1,28 +1,50 @@
 {
   "name": "electron-quick-start",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
-  "main": "main.js",
+  "description": "A minimal Electron application for WeChat",
+  "main": "src/main.js",
   "scripts": {
-    "start": "electron .",
-    "build": "electron-packager .  electron-quick-start --platform=darwin --arch=x64 --ignore=node_modules/electron-*",
-    "package": "asar pack electron-quick-start-darwin-x64/electron-quick-start.app/Contents/Resources/app electron-quick-start-darwin-x64/electron-quick-start.app/Contents/Resources/app.asar"
+    "start": "electron src/main.js",
+    "build":"./scripts/build-all.sh",
+    "build:osx":"./scripts/build.sh darwin x64",
+    "build:osx64":"./scripts/build.sh darwin x64",
+    "build:linux32":"./scripts/build.sh linux ia 32",
+    "build:linux":"./scripts/build.sh linux x64",
+    "build:linuxx64":"./scripts/build.sh linux x64",
+    "build:win":".\\scripts\\build-win32.bat win32 ia32",
+    "build:win32":".\\scripts\\build-win32.bat win32 ia32",
+    "build:win64":".\\scripts\\build-win32.bat win32 x64"
+
+
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": {
+    "type":"git",
+    "url":"https://github.com/electron/electron-quick-start"
+  },
   "keywords": [
     "Electron",
     "quick",
     "start",
     "tutorial",
-    "demo"
+    "web"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "YUE WEI SHI",
+  "license": "MIT",
   "devDependencies": {
-    "electron": "^2.0.0"
+    "babel-eslint":"^8.2.6",
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0"
   },
   "dependencies": {
-    "clear": "^0.1.0",
-    "electron-packager": "^12.1.0"
+    "electron": "^2.0.0",
+    "electron-packager": "^8.5.1",
+    "nconf": "^0.8.4",
+    "pinyin":"^2.8.3",
+    "emojione":"^3.1.7",
+    "electron-localshortcut": "^3.1.0",
+    "is-xfce": "^2.0.0"
   }
 }

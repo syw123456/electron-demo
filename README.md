@@ -1,45 +1,62 @@
-# electron-quick-start
+<img src="assets/icon.png" alt="logo" height="120" align="right" />
 
-**Clone and run for a quick way to see Electron in action.**
+# Electronic WeChat
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
+*A better WeChat on macOS and Linux. Built with [Electron](https://github.com/atom/electron).*
 
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
+**Important:** If you want to build the app by yourself rather than download the release directly, please consider to use the source code from [the production branch](https://github.com/geeeeeeeeek/electronic-wechat/tree/production), the master branch is under development and we cannot guarantee it to be stable.
 
-A basic Electron application needs just these files:
+[![Gitter](https://badges.gitter.im/geeeeeeeeek/electronic-wechat.svg)](https://gitter.im/geeeeeeeeek/electronic-wechat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+[![Build Status](https://travis-ci.org/geeeeeeeeek/electronic-wechat.svg?branch=master)](https://travis-ci.org/geeeeeeeeek/electronic-wechat)
+[![Build Status](https://img.shields.io/github/stars/geeeeeeeeek/electronic-wechat.svg)](https://github.com/geeeeeeeeek/electronic-wechat)
+[![Build Status](https://img.shields.io/github/forks/geeeeeeeeek/electronic-wechat.svg)](https://github.com/geeeeeeeeek/electronic-wechat)
+[![Build Status](https://img.shields.io/badge/README-切换语言-yellow.svg)](README_zh.md)
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
+![qq20160428-0 2x](https://cloud.githubusercontent.com/assets/7262715/14876747/ff691ade-0d49-11e6-8435-cb1fac91b3c2.png)
 
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
+## Features ([CHANGELOG](CHANGELOG.md))
 
-## To Use
+- **Modern UI and all features from Web WeChat.**
+- **Block message recall.**
+- **Stickers showing support.** [[?]](https://github.com/geeeeeeeeek/electronic-wechat/issues/2)
+- Share subscribed passages on Weibo, Qzone, Facebook, Twitter, Evernote, and email.
+- Mention users in a group chat.
+- Drag and drop to send photos.
+- Behaves like a native app, based on dozens of optimization.
+- Removes URL link redirects and takes you directly to blocked websites (e.g. taobao.com).
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+## How To Use
 
-```bash
+To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](https://www.npmjs.com/)) installed on your computer. From your command line:
+
+``` bash
 # Clone this repository
-git clone https://github.com/electron/electron-quick-start
+git clone https://github.com/geeeeeeeeek/electronic-wechat.git
 # Go into the repository
-cd electron-quick-start
-# Install dependencies
-npm install
-# Run the app
-npm start
+cd electronic-wechat
+# Install dependencies and run the app
+npm install && npm start
 ```
 
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+To pack into an app, simply type one of these:
 
-## Resources for Learning Electron
+``` shell
+npm run build:osx
+npm run build:linux
+npm run build:win32
+npm run build:win64
+```
 
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
-- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
+**New:** Install with your familiar package manager. Check out [images maintained by the community](https://github.com/geeeeeeeeek/electronic-wechat/wiki/System-Support-Matrix#%E7%A4%BE%E5%8C%BA%E8%B4%A1%E7%8C%AE%E7%9A%84%E5%AE%89%E8%A3%85%E5%8C%85)!
 
-## License
+**New:** Or, with homebrew!
 
-[CC0 1.0 (Public Domain)](LICENSE.md)
+```bash
+brew cask install electronic-wechat
+```
+
+#### [Download Released App](https://github.com/geeeeeeeeek/electronic-wechat/releases)
+
+#### License [MIT](LICENSE.md)
+
+*Electronic WeChat* is released by this open source project. While Web WeChat is a major component  in the app, it should be noted that this is a community release and not an official WeChat release.
